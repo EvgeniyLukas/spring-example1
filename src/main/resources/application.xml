@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+    <context:component-scan base-package="org.itstep"/>
+
+<!--    <bean id="java" class="org.itstep.JavaDeveloper" scope="prototype">-->
+<!--        <property name="nameJava" value="JavaIvan"/>-->
+<!--        <property name="javaSalary" value="10000"/>-->
+<!--        <property name="projects">-->
+<!--            <list>-->
+<!--                <value>Kotlin</value>-->
+<!--                <value>Scala</value>-->
+<!--                <value>Cpp</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="hello" value="150"/>-->
+<!--            </map>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+<!--    <bean id="cpp" class="org.itstep.CppDeveloper"/>-->
+
+
+
+<!--    <bean id = "developer" class="org.itstep.DeveloperRunnerImpl">-->
+<!--        <constructor-arg name="developer" ref="cpp"/>-->
+<!--    </bean>-->
+
+
+</beans>
