@@ -34,7 +34,8 @@ public class Main {
 //JAVA CONFIG
 
         ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
-        DeveloperRunnerImpl developer = context.getBean("developerRunnerImpl", DeveloperRunnerImpl.class);
+        DeveloperRunner developer = context.getBean("developerRunnerImpl", DeveloperRunner.class);
         developer.runCode();
+
     }
 }

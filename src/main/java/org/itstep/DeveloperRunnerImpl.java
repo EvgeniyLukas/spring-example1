@@ -8,12 +8,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class DeveloperRunnerImpl implements DeveloperRunner {
 
-
     private final Developer developer;
 
 
     @Autowired
-    public DeveloperRunnerImpl(Developer developer) {
+    public DeveloperRunnerImpl(@Qualifier("javaDeveloper") Developer developer) {
         this.developer = developer;
     }
 
