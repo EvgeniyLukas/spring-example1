@@ -1,9 +1,17 @@
 package org.itstep;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 public class Main {
@@ -32,6 +40,19 @@ public class Main {
         // ===============================================
 
 //JAVA CONFIG
+        //@Component
+        //@Autowired
+        //@Qualifier("javaDeveloper")
+        //@ComponentScan("org.itstep")
+
+        //@Configuration
+        //@Bean
+
+        //@Scope("prototype")
+        //@Value
+
+        //@PostConstruct
+        //@PreDestroy
 
         ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
         DeveloperRunner developer = context.getBean("developerRunnerImpl", DeveloperRunner.class);

@@ -1,17 +1,37 @@
 package org.itstep;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.*;
 
 @Component
+//@Scope("prototype")
 public class JavaDeveloper implements Developer {
-   String nameJava;
-   int javaSalary;
 
-   List<CppDeveloper> projects = new ArrayList<>();
-   Map<String, Integer> map = new HashMap<>();
-   Set<Developer>developers = new HashSet<>();
+    @Value("Java")
+    private String nameJava;
+
+    @Value("20000")
+    int javaSalary;
+
+    List<CppDeveloper> projects = new ArrayList<>();
+    Map<String, Integer> map = new HashMap<>();
+    Set<Developer> developers = new HashSet<>();
+
+
+    @PostConstruct
+    void init(){
+        System.out.println("Post construct");
+    }
+
+    @PreDestroy
+    void destroy(){
+        System.out.println("Pre destroy");
+    }
 
 
     public void setDevelopers(Set<Developer> developers) {

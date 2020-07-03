@@ -6,49 +6,49 @@
 
 
 
-    <context:component-scan base-package="org.itstep"/>
+<!--    <context:component-scan base-package="org.itstep"/>-->
 
 
-    <bean id="cpp1" class="org.itstep.CppDeveloper"/>
-    <bean id="cpp2" class="org.itstep.CppDeveloper"/>
-    <bean id="cpp3" class="org.itstep.CppDeveloper"/>
+<!--    <bean id="cpp1" class="org.itstep.CppDeveloper"/>-->
+<!--    <bean id="cpp2" class="org.itstep.CppDeveloper"/>-->
+<!--    <bean id="cpp3" class="org.itstep.CppDeveloper"/>-->
 
 
-    <bean id="java" class="org.itstep.JavaDeveloper" scope="prototype">
-        <property name="nameJava" value="JavaIvan"/>
-        <property name="javaSalary" value="10000"/>
+<!--    <bean id="java" class="org.itstep.JavaDeveloper" scope="prototype">-->
+<!--        <property name="nameJava" value="JavaIvan"/>-->
+<!--        <property name="javaSalary" value="10000"/>-->
 
 
-        <property name="projects">
-        <list>
-<!--            <value>Kotlin</value>-->
-<!--            <value>Scala</value>-->
-<!--            <value>Cpp</value>-->
-            <ref bean="cpp1"/>
-            <ref bean="cpp2"/>
-            <ref bean="cpp3"/>
-        </list>
-    </property>
-        <property name="map">
-            <map>
-                <entry key="hello" value="150"/>
-            </map>
-        </property>
+<!--        <property name="projects">-->
+<!--        <list>-->
+<!--&lt;!&ndash;            <value>Kotlin</value>&ndash;&gt;-->
+<!--&lt;!&ndash;            <value>Scala</value>&ndash;&gt;-->
+<!--&lt;!&ndash;            <value>Cpp</value>&ndash;&gt;-->
+<!--            <ref bean="cpp1"/>-->
+<!--            <ref bean="cpp2"/>-->
+<!--            <ref bean="cpp3"/>-->
+<!--        </list>-->
+<!--    </property>-->
+<!--        <property name="map">-->
+<!--            <map>-->
+<!--                <entry key="hello" value="150"/>-->
+<!--            </map>-->
+<!--        </property>-->
 
-        <property name="developers">
-            <set>
-                <ref bean="cpp1"/>
-            </set>
-        </property>
-    </bean>
+<!--        <property name="developers">-->
+<!--            <set>-->
+<!--                <ref bean="cpp1"/>-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
 
-    <bean id="cpp" class="org.itstep.CppDeveloper"/>
-
-
+<!--    <bean id="cpp" class="org.itstep.CppDeveloper"/>-->
 
 
-    <bean id = "developer" class="org.itstep.DeveloperRunnerImpl">
-        <constructor-arg name="developer" ref="cpp"/>
-    </bean>
+
+
+<!--    <bean id = "developer" class="org.itstep.DeveloperRunnerImpl">-->
+<!--        <constructor-arg name="developer" ref="cpp"/>-->
+<!--    </bean>-->
 
 </beans>
